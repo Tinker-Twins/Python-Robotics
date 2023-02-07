@@ -20,7 +20,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="k-means object clustering" href="../k_means_object_clustering/k_means_object_clustering.html" />
+    <link rel="next" title="Point cloud Sampling" href="../point_cloud_sampling/point_cloud_sampling.html" />
     <link rel="prev" title="Ray casting grid map" href="../ray_casting_grid_map/ray_casting_grid_map.html" /> 
 </head>
 
@@ -63,6 +63,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../gaussian_grid_map/gaussian_grid_map.html">Gaussian grid map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ray_casting_grid_map/ray_casting_grid_map.html">Ray casting grid map</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Lidar to grid map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../point_cloud_sampling/point_cloud_sampling.html">Point cloud Sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../k_means_object_clustering/k_means_object_clustering.html">k-means object clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../circle_fitting/circle_fitting.html">Object shape recognition using circle fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rectangle_fitting/rectangle_fitting.html">Object shape recognition using rectangle fitting</a></li>
@@ -135,7 +136,7 @@ necessary packages.</p>
 in a <code class="docutils literal notranslate"><span class="pre">csv</span></code> (comma separated values) format. Let’s write the
 <code class="docutils literal notranslate"><span class="pre">file_read</span></code> method:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">file_read</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Reading LIDAR laser beams (angles and corresponding distance data)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">measures</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span>
@@ -198,7 +199,7 @@ algorithm checks for neighbour elements in each iteration, and stops
 expansion on obstacles and free boundaries.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="k">def</span> <span class="nf">flood_fill</span><span class="p">(</span><span class="n">cpoint</span><span class="p">,</span> <span class="n">pmap</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    cpoint: starting point (x,y) of fill</span>
 <span class="sd">    pmap: occupancy map generated from Bresenham ray-tracing</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -271,7 +272,7 @@ from a center point (e.g. (10, 20)) with zeros:</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../ray_casting_grid_map/ray_casting_grid_map.html" class="btn btn-neutral float-left" title="Ray casting grid map" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../k_means_object_clustering/k_means_object_clustering.html" class="btn btn-neutral float-right" title="k-means object clustering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../point_cloud_sampling/point_cloud_sampling.html" class="btn btn-neutral float-right" title="Point cloud Sampling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
